@@ -1,0 +1,24 @@
+<div class="login">
+  <form [formGroup]="loginForm.form" (ngSubmit)="onSubmit(loginForm.form)" class="form_login">
+    <h2 translate>LOGIN FORM</h2>
+    <div>
+      <label translate>
+        Login:
+        <input formControlName="login" type="text" placeholder="" class="form_login-input form_input" />
+      </label>
+    </div>
+    <div>
+      <label translate>
+        Password:
+        <input
+          formControlName="password"
+          type="password"
+          placeholder=""
+          class="form_login-input form_input"
+        />
+      </label>
+    </div>
+    <button type="submit" [disabled]="loginForm.form.invalid" class="form_login_btn">Zaloguj</button>
+    <div *ngIf="showError" translate>Wrong credentials</div>
+  </form>
+</div>

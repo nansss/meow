@@ -1,0 +1,13 @@
+<div class="facts">
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="0"
+    (scrolledUp)="onScroll()"
+    (scrolled)="onScroll()"
+  >
+    <p *ngFor="let fact of facts">
+      {{ fact }}
+    </p>
+  </div>
+</div>
